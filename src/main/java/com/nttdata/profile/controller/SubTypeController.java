@@ -25,7 +25,7 @@ import reactor.core.publisher.Mono;
 @Api(tags = "Profile API")
 @RefreshScope
 @RestController
-@RequestMapping("/api/v1/profile/subtype")
+@RequestMapping("/subtype")
 public class SubTypeController {
 
   @Autowired

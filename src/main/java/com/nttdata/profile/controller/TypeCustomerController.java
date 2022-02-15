@@ -27,7 +27,7 @@ import reactor.core.publisher.Mono;
 @Slf4j
 @RefreshScope
 @RestController
-@RequestMapping("/api/v1/profile/typecustomer")
+@RequestMapping("/typecustomer")
 public class TypeCustomerController {
 
   @Autowired
