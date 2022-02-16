@@ -9,10 +9,10 @@ spring:
       username: nttdata
       password: qwerty
       #uri: http://config-server:8888
-      #fail-fast: true
-      #retry: 
-        #max-attempts: 20
-        #max-interval: 15000
-        #initial-interval: 10000
+      fail-fast: true
+      retry: 
+        max-attempts: 20
+        max-interval: 15000
+        initial-interval: 10000
         
 

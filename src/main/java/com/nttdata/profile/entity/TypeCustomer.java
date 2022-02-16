@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Document("type_customer")
+@Document(collection =  "type_customer")
 @AllArgsConstructor
 @NoArgsConstructor
 public class TypeCustomer {
