@@ -2,18 +2,47 @@ spring:
   application:
     name: service-profile
 
-
+#CONFIG SERVER FETCH GIT
   cloud:
     config:
-      uri: http://localhost:8888
+      #enabled: true
+      discovery:
+        enabled: true
+        service-id: config-server
+      name: service-profile
+      profile: dev
+      uri: ${REMOTE_REPOSITORY:http://localhost:8888}
+      #uri: http://localhost:8888
       #uri: http://config-server:8888
+      #uri: ${REMOTE_REPOSITORY:http://localhost:8888}
       username: nttdata
       password: qwerty
-      #uri: http://config-server:8888
-      fail-fast: true
-      retry: 
+      failFast: true
+      retry:
         max-attempts: 20
         max-interval: 15000
         initial-interval: 10000
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      #uri: http://config-server:8888
+#      username: nttdata
+#      password: qwerty
+#      #uri: http://config-server:8888
+#      fail-fast: true
+#      retry: 
+#        max-attempts: 20
+#        max-interval: 15000
+#        initial-interval: 10000
         
 
